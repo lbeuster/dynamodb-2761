@@ -14,7 +14,8 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <aws.version>2.17.56</aws.version>
+    <aws.version>2.17.58</aws.version>
+    <!-- S3-v1 is needed for localstack -->
     <aws1.version>1.12.77</aws1.version>
     <testcontainers.version>1.16.0</testcontainers.version>
   </properties>
@@ -48,6 +49,7 @@
       <version>${testcontainers.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- needed by localstack -->
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-s3</artifactId>

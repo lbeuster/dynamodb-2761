@@ -1,0 +1,6 @@
+CLOUDFORMATION_STACK=cts-dynamodb-update-item
+
+DYNAMODB_TABLE=UpdateItem
+
+# don't page output from aws-cli
+export AWS_PAGER=

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+
+  <Properties>
+    <Property name="ROOT_LEVEL" value="debug" />
+    <Property name="CONSOLE_LEVEL" value="warn" />
+  </Properties>
+
+  <Appenders>
+    <Console name="CONSOLE">
+      <ThresholdFilter level="${CONSOLE_LEVEL}" />
+      <PatternLayout>
+        <pattern>%-5level %d %C{1.} [%-10thread] %m%n</pattern>
+      </PatternLayout>
+    </Console>
+
+    <File name="FILE" fileName="target/test.log">
+      <PatternLayout>
+        <pattern>%-5level %d %C{1.} [%-10thread] %m%n</pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+
+  <Loggers>
+    <Root level="${ROOT_LEVEL}">
+      <AppenderRef ref="CONSOLE" />
+      <AppenderRef ref="FILE" />
+    </Root>
+  </Loggers>
+
+</Configuration>

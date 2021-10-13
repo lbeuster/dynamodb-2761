@@ -58,7 +58,7 @@ abstract class AbstractDynamoDbIT {
     /**
      *
      */
-    @SuppressWarnings("resource")
+    @SuppressWarnings({ "resource", "unused" })
     @BeforeAll
     static void setUpLocalstack() {
 
